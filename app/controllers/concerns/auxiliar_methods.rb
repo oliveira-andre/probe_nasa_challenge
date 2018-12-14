@@ -7,4 +7,14 @@ module AuxiliarMethods
     }
     routes
   end
+
+  def directions
+    directions = {E: "Esquerda", D: "Direita", C: "Cima", B: "Baixo"}
+    directions
+  end
+
+  def moviments
+    moviments = {M: "mover na direção que está apontado", GE: "girar 90 graus à esquerda", GD: "girar 90 graus à direta"}
+    moviments
+  end
 end
