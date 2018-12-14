@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       post "/", to: "home#index"
       post "/instructions", to: "home#instructions"
+      post "/probe/reset", to: "probe#reset"
+      post "/probe/moviments", to: "probe#moviments"
+      post "/probe/position", to: "probe#position"
     end
   end
 
