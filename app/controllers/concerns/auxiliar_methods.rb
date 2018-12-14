@@ -3,7 +3,7 @@ module AuxiliarMethods
 
   def routes
     routes = {
-        "/api/v1/": "Página principal, que exibirá a mesma menssagem que você está vendo agora"
+        "/api/v1/": "Página principal, que exibe as boas vindas ao jogo"
     }
     routes
   end
@@ -16,5 +16,10 @@ module AuxiliarMethods
   def moviments
     moviments = {M: "mover na direção que está apontado", GE: "girar 90 graus à esquerda", GD: "girar 90 graus à direta"}
     moviments
+  end
+
+  def example
+    example = {key: "movimentos", value: "GE, M, M, M, GD, M, M"}
+    example
   end
 end
