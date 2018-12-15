@@ -15,10 +15,15 @@ module ProbeMoviments
 
   def move
     probe = Probe.last
-    probe.update(x: probe.x - 1) if probe.direction == "E"
-    probe.update(x: probe.x + 1) if probe.direction == "D"
-    probe.update(y: probe.y - 1) if probe.direction == "B"
-    probe.update(y: probe.y + 1) if probe.direction == "C"
+    probe.update(x_axis: probe.x_axis - 1) if probe.direction == "E"
+    probe.update(x_axis: probe.x_axis + 1) if probe.direction == "D"
+    probe.update(y_axis: probe.y_axis - 1) if probe.direction == "B"
+    probe.update(y_axis: probe.y_axis + 1) if probe.direction == "C"
+  end
+
+  def valid_moviments(moviment)
+    error = true unless moviment == "GE" || moviment== "GD" || moviment == "M"
+    error
   end
 
 end
