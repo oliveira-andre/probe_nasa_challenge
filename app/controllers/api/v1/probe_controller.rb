@@ -10,7 +10,9 @@ module Api
 
       def moviments
         @moviments.each do |moviment|
-          puts moviment.upcase
+          render 400, json: {cod: 400, status: "Bad Request", message: "Insira parametros válidos"} unless moviment.upcase == "GE" || moviment.upcase == "GD" || moviment.upcase == "M"
+          turn_around(moviment.upcase) unless moviment.upcase == "M"
+          move(moviment.upcase) if moviment.upcase == "M"
         end
       end
 
