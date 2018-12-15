@@ -4,6 +4,8 @@ module Api
       before_action :set_probe
       before_action :valid_params, only: :moviments
 
+      include ProbeMoviments
+
       def reset
         render 200, json: {cod: 200, status: "OK", message: "A sonda foi resetada com sucesso"} if @probe.destroy
       end
@@ -12,7 +14,7 @@ module Api
         @moviments.each do |moviment|
           render 400, json: {cod: 400, status: "Bad Request", message: "Insira parametros válidos"} unless moviment.upcase == "GE" || moviment.upcase == "GD" || moviment.upcase == "M"
           turn_around(moviment.upcase) unless moviment.upcase == "M"
-          move(moviment.upcase) if moviment.upcase == "M"
+          move if moviment.upcase == "M"
         end
       end
 

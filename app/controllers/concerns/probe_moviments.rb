@@ -13,4 +13,12 @@ module ProbeMoviments
     probe.update(direction: "E") if probe.direction == "B" && spin == "GD"
   end
 
+  def move
+    probe = Probe.last
+    probe.update(x: probe.x - 1) if probe.direction == "E"
+    probe.update(x: probe.x + 1) if probe.direction == "D"
+    probe.update(y: probe.y - 1) if probe.direction == "B"
+    probe.update(y: probe.y + 1) if probe.direction == "C"
+  end
+
 end
