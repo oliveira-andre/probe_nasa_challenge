@@ -4,6 +4,7 @@ module Api
       test "Move with success the probe" do
         puts "Move with success the probe"
         moviment_params = {moviments: "GE, M, M"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :ok
       end
@@ -11,6 +12,7 @@ module Api
       test "Invalid params" do
         puts "invalid params"
         moviment_params = {moviments: "error"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :bad_request
       end
@@ -18,6 +20,7 @@ module Api
       test "Move to a invalid place negative x_axis" do
         puts "Move to a invalid place negative x_axis"
         moviment_params = {moviments: "GE, GE, M"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :bad_request
       end
@@ -25,6 +28,7 @@ module Api
       test "Move to a invalid place positive x_axis" do
         puts "Move to a invalid place positive x_axis"
         moviment_params = {moviments: "M, M, M, M, M"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :bad_request
       end
@@ -39,6 +43,7 @@ module Api
       test "Move to a invalid place positive y_axis" do
         puts "Move to a invalid place positive x_axis"
         moviment_params = {moviments: "GE, M, M, M, M, M"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :bad_request
       end
