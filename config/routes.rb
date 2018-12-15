@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   post "*path", to: "api/v1/home#not_found"
-  post "/", to: "api/v1/home#index"
+  post "/", to: "api/v1/home#not_found"
   get "*path", to: "api/v1/home#not_found"
-  get "/", to: "api/v1/home#index"
+  get "/", to: "api/v1/home#not_found"
 end
