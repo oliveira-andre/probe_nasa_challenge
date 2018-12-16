@@ -14,7 +14,7 @@ Rest API status codes
 Initial
 
 ```
-    POST: localhost:3000/api/v1/
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/
     cache-control: no-cache
 ```
 
@@ -47,7 +47,7 @@ Return Success Example
 Instruction
 
 ```
-    POST: localhost:3000/api/v1/instructions
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/instructions
     cache-control: no-cache
 ```
 
@@ -87,9 +87,9 @@ Return Success Example
 Not Found
 
 ```
-    POST: localhost:3000/api/v1/any_not_found_page
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/any_not_found_page
                         or
-    POST: localhost:3000/any_not_found_page
+    POST: https://nasa-probe-challenge.herokuapp.com/any_not_found_page
     cache-control: no-cache
 ```
 
@@ -125,7 +125,7 @@ Return Success Example
 Moviments
 
 ```
-    POST: localhost:3000/api/v1/probe/moviments
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/probe/moviments
     cache-control: no-cache
 ```
 
@@ -158,7 +158,7 @@ Return Error Example
 Reset
 
 ```
-    POST: localhost:3000/api/v1/probe/reset
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/probe/reset
     cache-control: no-cache
 ```
 
@@ -182,7 +182,7 @@ Return Success Example
 Position
 
 ```
-    POST: localhost:3000/api/v1/probe/position
+    POST: https://nasa-probe-challenge.herokuapp.com/api/v1/probe/position
     cache-control: no-cache
 ```
 
