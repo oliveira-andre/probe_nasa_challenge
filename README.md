@@ -207,3 +207,31 @@ Return Success Example
     }
 ```
 
+Running the tests
+
+```
+    rails test
+```
+
+Expected output
+
+![test](/storage/expected_test_output.png)
+
+Runnning rubycritic
+
+```
+    rubycritic
+```
+
+Expected output
+
+![rubycritic](/storage/expected_rubycritic_output.png)
+
+Runnning brakeman
+
+```
+    brakeman
+```
+
+![brakeman](/storage/expected_brakeman_output.png)
+
