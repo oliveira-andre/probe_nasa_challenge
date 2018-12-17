@@ -36,6 +36,7 @@ module Api
       test "Move to a invalid place negative y_axis" do
         puts "Move to a invalid place negative x_axis"
         moviment_params = {moviments: "GD, M"}
+        post(api_v1_reset_path)
         post(api_v1_moviments_path, params: moviment_params)
         assert_response :bad_request
       end
